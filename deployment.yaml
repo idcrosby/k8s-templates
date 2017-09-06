@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: depName
+  labels:
+    name: labelName
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: labelName
+    spec:
+      containers:
+        - name: containerName
+          image: image:tag
+          ports:
+            - containerPort: 1111

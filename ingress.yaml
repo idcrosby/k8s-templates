@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata: 
+  name: ingressName
+spec: 
+  rules: 
+    - http: 
+        paths: 
+          - path: /path
+            backend: 
+              serviceName: serviceName
+              servicePort: 1111

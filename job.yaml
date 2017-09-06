@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: batchName
+spec:
+  template:
+    metadata:
+      name: batchName
+    spec:
+      containers:
+      - name: containerName
+        image: image:tag
+        command: ["runthis",  "-arg=1"]
+      restartPolicy: Never

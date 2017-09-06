@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: DaemonSet
+metadata:
+  name: daemonSetName
+  namespace: kube-system
+spec:
+  template:
+    metadata:
+      labels:
+        name: daemonSetName
+    spec:
+      containers:
+      - name: containerName
+        image: container:tag
